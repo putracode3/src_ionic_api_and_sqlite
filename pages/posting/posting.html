@@ -1,0 +1,38 @@
+<ion-navbar *navbar>
+    <ion-title>
+        Posting
+    </ion-title>
+</ion-navbar>
+
+<ion-content padding>
+  <ion-list>
+
+    <!-- <form (ngSubmit)="logForm()"> -->
+      <ion-item>
+        <ion-label>Todo</ion-label>
+
+        <ion-input pattern="[a-zA-Z ]*" [(ngModel)]="todo.title" name="title" (keyup)="cetak()"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>id</ion-label>
+        <ion-input type="text" [(ngModel)]="todo.id" name="title">1</ion-input>
+      </ion-item>
+      <ion-item>
+        <h2>title: {{todo.title}}</h2>
+        <p>cet: {{todo.cet}}</p>
+      </ion-item>
+    <!-- </form> -->
+
+    <button ion-button (click)="ionViewDidLoad()">Button</button>
+  </ion-list>
+
+    <ion-card>
+        <ion-card-header>
+            Response
+        </ion-card-header>
+
+        <ion-card-content>
+
+        </ion-card-content>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Sqlite Example
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <h4>Lets Create Simple Todo List which works with Sqlite Database.</h4>
+    <div>
+        <!-- <ion-item>
+            <ion-label fixed>Enter Todo</ion-label>
+            <ion-input type="text" [(ngModel)]="text"></ion-input>
+        </ion-item> -->
+        <ion-item>
+            <ion-label fixed>Username</ion-label>
+            <ion-input type="text" [(ngModel)]="param.username" [value]="val.username"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Password</ion-label>
+            <ion-input type="text" [(ngModel)]="param.password" [value]="val.password"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Alamat</ion-label>
+            <ion-input type="text" [(ngModel)]="param.alamat" [value]="val.alamat"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Telepon</ion-label>
+            <ion-input type="text" [(ngModel)]="param.telepon" [value]="val.telepon"></ion-input>
+        </ion-item>
+
+        <button ion-button (click)="add(param)">Add</button>
+
+    </div>
+    <!-- <span ion-button (click)="drop()">Drop</span> -->
+    <ul>
+        <li *ngFor="let todo of todos; let i=index">
+          {{"nama: "+todo.username+" - password:"+todo.password+" - alamat:"+todo.alamat+" - telepon: "+todo.telepon}}
+          <span ion-button (click)="update(todo.id,todo.username,todo.password,todo.alamat,todo.telepon)">Update</span> <span ion-button (click)="delete(todo.id)">X</span>
+        </li>
+    </ul>
+
+</ion-content>
